@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# 基本名詞介紹
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## store :
 
-## Available Scripts
+- 儲存全域變數
 
-In the project directory, you can run:
+## action :
 
-### `npm start`
+- 內會帶有 type 代表是 action 的名字
+- 改變 state 的行為
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## reducer :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 帶有兩個參數(初始值, action)
+- 根據不同的 action 執行改變 state 的 fn
 
-### `npm test`
+## dispatch :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 傳送 action 給 reducer
 
-### `npm run build`
+# 實際操作步驟起手式
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 第一步 安裝 React Redux、Redux Toolkit、redux-thunk
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install react-redux @reduxjs/toolkit redux-thunk
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 第二步 建立資料夾和檔案方便統整
 
-### `npm run eject`
+### 在 src 內建立 redux 資料夾統一管理所有 redux 邏輯
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 在其中建立一個 store.js 用於儲存所有 reducer(state)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 建立一個 reducers 資料夾 裡面放所有 reducer 的邏輯
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 第三步 使用 Provider 將 store 傳遞至底下子元件中
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 第四步 在 redux 下建立一個 action.js 針對不同 State 建立 Action
