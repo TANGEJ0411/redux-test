@@ -1,12 +1,14 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import CounterRuducer from "./reducer/CounterRuducer";
+import CounterReducer from "./reducer/CounterReducer";
 import TodoListReducer from "./reducer/TodoListReducer";
-import CounterRuducerRTK from "./reducer/CounterRuducerRTK"
+import CounterReducerRTK from "./reducer/CounterReducerRTK"
+import FetchHotelReducer from "./reducer/FetchHotelReducer";
 
 const allReducers = combineReducers({
-    counter: CounterRuducer,
+    counter: CounterReducer,
     todoList: TodoListReducer,
-    counterRTK: CounterRuducerRTK
+    counterRTK: CounterReducerRTK,
+    fetchHotel: FetchHotelReducer,
 })
 
 

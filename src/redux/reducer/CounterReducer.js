@@ -5,7 +5,7 @@
 
 const value = 0
 
-const CounterRuducer = (state = value, action) => {
+const CounterReducer = (state = value, action) => {
     console.log(state, action, 'conunter action')
     switch (action.type) {
         case 'COUNTER/INCREMENT':
@@ -22,4 +22,4 @@ const CounterRuducer = (state = value, action) => {
     }
 }
 
-export default CounterRuducer
+export default CounterReducer

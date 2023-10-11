@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, MINUS_ONE, PLUS_NUM, PLUS_ONE, TOOGLE_TODO } from "./actionTypes"
+import { ADD_TODO, DELETE_TODO, MINUS_ONE, PLUS_NUM, PLUS_ONE, TOOGLE_TODO, FETCH_HOTEL } from "./actionTypes"
 
 export const increament = () => {
     return {
@@ -42,5 +42,11 @@ export const toogleTodo = (id) => {
     return {
         type: TOOGLE_TODO,
         payload: id
+    }
+}
+
+export const fetchHotel = () => {
+    return {
+        type: FETCH_HOTEL,
     }
 }

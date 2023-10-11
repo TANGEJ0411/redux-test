@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { decreamentRTK, increamentRTK, increaseRTK } from '../redux/reducer/CounterRuducerRTK';
+import { decreamentRTK, increamentRTK, increaseRTK } from '../redux/reducer/CounterReducerRTK';
 
 
 function CounterComponentRTK() {
