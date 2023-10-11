@@ -35,3 +35,13 @@ npm install react-redux @reduxjs/toolkit redux-thunk
 ## 第三步 使用 Provider 將 store 傳遞至底下子元件中
 
 ## 第四步 在 redux 下建立一個 action.js 針對不同 State 建立 Action
+
+# saga async fetch data (api)
+
+## 第一步 定義saga
+
+## 第二步 建立 reducer 去 dispatch fetch回來的資料
+
+## 第三步 設定 action 和 action type
+
+## 第四步 store 裡放入 middleware
